@@ -1,0 +1,45 @@
+.hero {
+    background: var(--hero-color);
+    max-width: 1600px;
+    height: 600px;
+    /* Многослойный фон: сначала прозрачный фон (затемнение) (с помощью градиента,
+  потом ставим картинку) */
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/Imgfon1.jpg);
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h1 {
+    width: 696px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--white-next-color);
+}
+
+/* Кнопка герой */
+.btn-studio {
+    font-family: 'Roboto', sans-serif;
+    width: 200px;
+    height: 50px;
+    left: 685px;
+    top: 430px;
+    background: var(--logo-color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--white-next-color);
+}

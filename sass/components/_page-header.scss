@@ -1,0 +1,142 @@
+
+.top {
+    background-color: var(--white-next-color);
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.nav >.list {
+    display: flex;
+}
+
+/* Задаем элементам отступы (кроме последнего ребенка) */
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+&.current {
+    color: var(--logo-color);
+}
+}
+.line-constant {
+    position: relative;
+&::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--logo-color);
+    opacity: 1;
+}
+}
+.line-hidden {
+    position: relative;
+&::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--logo-color);
+    transform: scale(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+&:hover::after {
+    transform: scale(1);
+}
+}
+
+.list a {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover,
+&:focus {
+    color: var(--logo-color);
+}
+}
+
+.list li {
+    list-style-type: none;
+}
+
+.contacts {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 0;
+}
+
+.contacts a {
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--context-color);
+    align-self: baseline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover,
+&:focus {
+    color: var(--logo-color);
+}
+}
+.header-icon {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:focus,
+&:hover {
+    fill: var(--logo-color);
+}
+}
+
+.letter {
+    width: 17px;
+    height: 15px;
+}
+
+.phone {
+    width: 16px;
+    height: 16px;
+}
+.cont-item {
+    list-style-type: none;
+    display: flex;
+&+.cont-item {
+    margin-left: 50px;
+}    
+}
+.cont-link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}

@@ -1,0 +1,50 @@
+
+.dignity {
+    padding-bottom: 0;
+}
+
+.dignity__list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* легкий способ растянуть элементы */
+    justify-content: space-between;
+}
+
+/* Отображение ширины в % от родителя  (100% - сумма маржинов в строке -1(крайний)) / на количество элементов в строке*/
+.dignity__item {
+    width: calc((100% - 90px) / 4);
+    list-style-type: none;
+
+    &:not(:last-child) {
+    margin-right: 30px;
+}
+}
+.dignity__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    margin-bottom: 10px;
+}
+
+.dignity__text {
+    line-height: 1.71;
+}
+
+.thumb-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.thumb-item__icon {
+    width: 70px;
+    height: 70px;
+}
