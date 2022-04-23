@@ -184,12 +184,30 @@ a {
   fill: var(--logo-color);
 }
 
-.nobile-menu__soc-network {
+.mobile-menu__soc-network {
   display: flex;
+  padding-top: 62px;
+}
+
+.mobile-menu__soc-network-link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--logo-color);
+}
+
+.mobile-menu__soc-network__item:not(:last-child) {
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .mobile-menu {
   position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -206,6 +224,54 @@ a {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.mobile-menu__nav-link {
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms linear, visibility 250ms linear;
+}
+
+.mobile-menu__nav-link:hover,
+.mobile-menu__nav-link:focus {
+  color: var(--logo-color);
+  border: none;
+}
+
+.mobile-menu__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__nav-contacts {
+  margin-top: 302px;
+}
+
+.mobile-menu__tel {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: var(--logo-color);
+}
+
+.mobile-menu__email {
+  display: inline-block;
+  padding-top: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--context-color);
 }
 
 .hero {

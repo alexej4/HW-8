@@ -15,16 +15,21 @@
 <body>
         <!--Шапка сайта-->
         <header class="top page-header">
-            <div class="conteiner header-wrap">
+            <div class="container header__wrap">
                 <nav class="nav">
                     <a href="./index.html" lang="en" class="logo"><span>Web</span>Studio</a>
-                    <ul class="list">
-                        <li class="nav-item"><a href="./index.html" class="nav-link line-hidden">Студия</a></li>
-                        <li class="nav-item"><a href="./portfolio.html" class="nav-link current line-constant">Портфолио</a></li>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="./index.html" class="nav-link current line-constant">Студия</a></li>
+                        <li class="nav-item"><a href="./portfolio.html" class="nav-link line-hidden">Портфолио</a></li>
                         <li class="nav-item"><a href="#" class="nav-link line-hidden">Контакты</a></li>
                     </ul>
                 </nav>
-                <ul class="contacts">
+                <button type="button" class="mobile-menu-btn" data-menu-open>
+                    <svg class="mobile-menu-btn__icon" width="40" height="40">
+                        <use href=".//images/symbol-defs1.svg#icon-burger-menu"></use>
+                    </svg>
+                </button>
+                <ul class="nav-contacts">
                     <li class="cont-item">
                         <a href="mailto:info@devstudio.com" class="cont-link"><svg class="header-icon letter">
                                 <use href="./images/symbol-defs.svg#icon-letterHdr"></use>
@@ -36,6 +41,43 @@
                             </svg>+38 096 111 11 11</a>
                     </li>
                 </ul>
+            </div>
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__close-icon" width="40" height="40">
+                            <use href=".//images/symbol-defs1.svg#icon-close-burger-menu"></use>>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__nav-list">
+                        <li class="mobile-menu__nav-item"><a href="./index.html" class="mobile-menu__nav-link">Студия</a></li>
+                        <li class="mobile-menu__nav-item"><a href="./portfolio.html" class="mobile-menu__nav-link">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__nav-contacts">
+                        <li class="">
+                            <a href="tel:+380961111111" class="mobile-menu__tel">+38 096 111 11 11</a>
+                        </li>
+                        <li class="">
+                            <a href="mailto:info@devstudio.com" class="mobile-menu__email">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__soc-network">
+                        <li class="mobile-menu__soc-network__item">
+                            <a href="#" class="mobile-menu__soc-network-link">Instagram</a>
+                        </li>
+                        <li class="mobile-menu__soc-network__item">
+                            <a href="#" class="mobile-menu__soc-network-link">Twitter</a>
+                        </li>
+                        <li class="mobile-menu__soc-network__item">
+                            <a href="#" class="mobile-menu__soc-network-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__soc-network-link">LinkedIn</a>
+                        </li class="mobile-menu__soc-network__item">
+                    </ul>
+                </div>
             </div>
         </header>
     <main>
@@ -244,5 +286,6 @@
             .getBoundingClientRect();
         document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script> -->
+    <script src="./js/menu.js"></script>
 </body>
 </html>
