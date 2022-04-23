@@ -73,12 +73,33 @@ img {
   height: auto;
 }
 
-.conteiner {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+a {
+  text-decoration: none;
+}
+
+.container {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -90,6 +111,8 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo:active, .logo:focus, .logo:hover {
@@ -114,156 +137,75 @@ img {
   color: var(--logo-color);
 }
 
-.top {
-  background-color: var(--white-next-color);
-  border-bottom: 1px solid #ececec;
-  display: flex;
-  align-items: center;
-  z-index: 1;
+.nav-list, .nav-contacts {
+  display: none;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.header-wrap {
-  display: flex;
-  align-items: center;
-}
-
-.nav > .list {
-  display: flex;
-}
-
-/* Задаем элементам отступы (кроме последнего ребенка) */
-.nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.nav-link.current {
-  color: var(--logo-color);
-}
-
-.line-constant {
+.page-header {
   position: relative;
 }
 
-.line-constant::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--logo-color);
-  opacity: 1;
-}
-
-.line-hidden {
-  position: relative;
-}
-
-.line-hidden::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--logo-color);
-  transform: scale(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-hidden:hover::after {
-  transform: scale(1);
-}
-
-.list a {
-  list-style: none;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.list a:hover, .list a:focus {
-  color: var(--logo-color);
-}
-
-.list li {
-  list-style-type: none;
-}
-
-.contacts {
+.header__wrap {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contacts a {
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--context-color);
-  align-self: baseline;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 0;
 }
 
-.contacts a:hover, .contacts a:focus {
-  color: var(--logo-color);
+.mobile-menu__container {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-.header-icon {
-  margin: 0;
-  padding: 0;
-  margin-right: 10px;
-  fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
 }
 
-.header-icon:focus, .header-icon:hover {
+.mobile-menu__close-icon:hover,
+.mobile-menu__close-icon:focus {
   fill: var(--logo-color);
 }
 
-.letter {
-  width: 17px;
-  height: 15px;
+.mobile-menu-btn__icon:hover,
+.mobile-menu-btn__icon:focus {
+  fill: var(--logo-color);
 }
 
-.phone {
-  width: 16px;
-  height: 16px;
-}
-
-.cont-item {
-  list-style-type: none;
+.nobile-menu__soc-network {
   display: flex;
 }
 
-.cont-item + .cont-item {
-  margin-left: 50px;
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
-.cont-link {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .hero {

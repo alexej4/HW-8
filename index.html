@@ -14,16 +14,21 @@
 <body>
 <!--Шапка сайта-->
     <header class="top page-header">
-        <div class="conteiner header-wrap">
+        <div class="container header__wrap">
         <nav class="nav">
             <a href="./index.html" lang="en" class="logo"><span>Web</span>Studio</a>
-            <ul class="list">
+            <ul class="nav-list">
                 <li class="nav-item"><a href="./index.html" class="nav-link current line-constant">Студия</a></li>
                 <li class="nav-item"><a href="./portfolio.html" class="nav-link line-hidden">Портфолио</a></li>
                 <li class="nav-item"><a href="#" class="nav-link line-hidden">Контакты</a></li>
             </ul>
         </nav>
-        <ul class="contacts">
+        <button type="button" class="mobile-menu-btn" data-menu-open>
+            <svg class="mobile-menu-btn__icon" width="40" height="40">
+                <use href=".//images/symbol-defs1.svg#icon-burger-menu"></use>
+            </svg>
+        </button>
+        <ul class="nav-contacts">
             <li class="cont-item">
                 <a href="mailto:info@devstudio.com" class="cont-link"><svg class="header-icon letter">
                     <use href="./images/symbol-defs.svg#icon-letterHdr"></use>
@@ -34,17 +39,53 @@
                     </svg>+38 096 111 11 11</a></li>
         </ul>
         </div>
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon" width="40" height="40">
+                        <use href=".//images/symbol-defs1.svg#icon-close-burger-menu"></use>>
+                    </svg>
+                </button>
+                <ul class="mobile-menu__nav-list">
+                    <li class="nav-item"><a href="./index.html" class="">Студия</a></li>
+                    <li class="nav-item"><a href="./portfolio.html" class="">Портфолио</a></li>
+                    <li class="nav-item"><a href="#" class="">Контакты</a></li>
+                </ul>
+                <ul class="mobile-menu__nav-contacts">
+                    <li class="">
+                        <a href="mailto:info@devstudio.com" class="cont-link">info@devstudio.com</a>
+                    </li>
+                    <li class="">
+                        <a href="tel:+380961111111" class="cont-link">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+                <ul class="nobile-menu__soc-network">
+                    <li class="">
+                        <a href="#">Instagram</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li class="">
+                        <a href="#">LinkedIn</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
     </header>
     <main>
 <!--Секция HERO-->
-            <section class="hero">
+            <!-- <section class="hero">
             <div class="conteiner">
             <h1>Эффективные решения для вашего бизнеса</h1>
             <button type="button" class="btn-studio" data-modal-open>Заказать услугу</button>
             </div>
-            </section>
+            </section> -->
 <!--Секция "Наши достоинства"-->
-            <section class="dignity section">
+            <!-- <section class="dignity section">
             <div class="conteiner">
             <h2 class="visually-hidden">Почему именно мы?</h2>
             <ul class="dignity__list">
@@ -94,10 +135,10 @@
                 </li>
             </ul>
             </div>
-        </section>
+        </section> -->
             
 <!--Секция "Чем мы занимаемся"-->
-            <section class="about-work section ">
+            <!-- <section class="about-work section ">
                 <div class="conteiner">
                 <h2 class="about-work__title">Чем мы занимаемся</h2>
                 <ul class="about-w__list">
@@ -122,9 +163,10 @@
                     
                 </ul>
                 </div>
-            </section>
+            </section> -->
+
 <!--Секция "Наша команда"-->
-            <section class="team section">
+            <!-- <section class="team section">
                 <div class="conteiner">
                 <h2 class="about-work__title">Наша команда</h2>
                 <ul class="team-list">
@@ -284,9 +326,9 @@
                     </li>
                 </ul>
                 </div>
-            </section>
+            </section> -->
             <!-- Постоянные клиенты -->
-            <section class="client section">
+            <!-- <section class="client section">
                 <div class="conteiner">
                     <h2 class="about-work__title">Постоянные клиенты</h2>
                     <ul class="client-list">
@@ -336,9 +378,10 @@
                 </div>
 
             </section>
-    </main>
-<!--Подвал сайта-->
-    <footer class="ftr">
+    </main> -->
+
+    <!--Подвал сайта-->
+    <!-- <footer class="ftr">
         <div class="conteiner ftr-dad">
             <div class="ftr-main">
             <a href="./index.html" lang="en" class="logo"><span>Web</span>Studio</a>
@@ -393,7 +436,7 @@
                 </div>
             </form>
         </div>
-    </footer>
+    </footer> -->
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -444,5 +487,6 @@
     </script> -->
     <!-- Скрипт для отрытия/закрытия модального окна -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
