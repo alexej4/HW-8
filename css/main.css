@@ -84,7 +84,7 @@ a {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 448px;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -125,9 +125,10 @@ a {
 }
 
 .ftr .logo {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   color: var(--white-next-color);
-  margin-bottom: 20px;
+  margin: 0;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -276,13 +277,13 @@ a {
 
 .hero {
   background: var(--hero-color);
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   /* Многослойный фон: сначала прозрачный фон (затемнение) (с помощью градиента,
   потом ставим картинку) */
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Imgfon1.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/img-hero.jpg);
   background-size: cover;
-  padding-top: 200px;
+  padding-top: 118px;
   padding-bottom: 200px;
   text-align: center;
   margin-left: auto;
@@ -290,10 +291,11 @@ a {
 }
 
 .hero h1 {
-  width: 696px;
+  padding-top: 0;
+  width: 360px;
   margin: 0 auto;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -320,25 +322,14 @@ a {
 }
 
 .dignity {
+  padding-top: 60px;
   padding-bottom: 0;
-}
-
-.dignity__list {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  /* легкий способ растянуть элементы */
-  justify-content: space-between;
 }
 
 /* Отображение ширины в % от родителя  (100% - сумма маржинов в строке -1(крайний)) / на количество элементов в строке*/
 .dignity__item {
-  width: calc((100% - 90px) / 4);
-  list-style-type: none;
-}
-
-.dignity__item:not(:last-child) {
-  margin-right: 30px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .dignity__title {
@@ -351,6 +342,7 @@ a {
 }
 
 .dignity__text {
+  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -358,7 +350,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -407,20 +399,34 @@ a {
   margin-bottom: 50px;
 }
 
-.client-list {
-  display: flex;
-  align-content: center;
+.client {
+  padding-top: 66px;
 }
 
-.client-list-path:not(:last-child) {
-  margin-right: 30px;
+.client-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.client-list__path {
+  margin-bottom: 30px;
+}
+
+.client-list__path:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.client-list__path:nth-child(2n) {
+  margin-left: 30px;
 }
 
 .old-clients {
   display: flex;
   justify-content: center;
   fill: #afb1b8;
-  width: 170px;
+  width: 210px;
   height: 92px;
   text-align: center;
   border: 1px solid #afb1b8;
@@ -439,17 +445,17 @@ a {
 }
 
 .ftr {
-  max-width: 1600px;
+  max-width: 480px;
   background-color: var(--hero-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .ftr-list {
   list-style: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .ftr-sc:not(:last-child) {
@@ -481,25 +487,16 @@ a {
 }
 
 .ftr-socnetwork > p {
+  text-align: center;
   text-transform: uppercase;
   color: var(--white-next-color);
   margin-bottom: 20px;
 }
 
-.ftr-dad {
-  display: flex;
-  align-items: baseline;
-}
-
-.ftr-socnetwork {
-  display: block;
-  align-items: baseline;
-  margin-right: auto;
-  margin-left: 70px;
-}
-
 .ftr-socnetwork-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .ftr-icon {
@@ -526,14 +523,8 @@ a {
   background-color: var(--logo-color);
 }
 
-.subscription-form-lable {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .subscription-form-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding-left: 16px;
   align-items: center;
@@ -548,7 +539,7 @@ a {
 }
 
 .subscription-button {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   border: none;
@@ -564,6 +555,9 @@ a {
   background-color: var(--logo-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subscription-button::after {
@@ -579,7 +573,9 @@ a {
 }
 
 .subscription-form-title {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -635,6 +631,11 @@ a {
 
 .modal-close-btn:hover, .modal-close-btn:focus {
   fill: var(--logo-color);
+}
+
+.modal {
+  width: 450px;
+  overflow: scroll;
 }
 
 .modal > strong {
@@ -784,12 +785,13 @@ label > a {
 
 .port-btn-list {
   list-style: none;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .port-btn-list > .item:not(:last-child) {
-  margin-right: 8.12px;
+  margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .port-btn {
@@ -824,23 +826,21 @@ label > a {
 
 .port-list {
   list-style: none;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.port-our-work {
+  padding-top: 60px;
 }
 
 .port-item {
-  width: 370px;
-  margin-right: 30px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.port-item:not(:last-child) {
   margin-bottom: 30px;
-}
-
-.port-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.port-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 .port-item-link {
@@ -911,24 +911,17 @@ label > a {
 
 /* Секция Наша команда */
 .team {
-  padding-top: 94px;
+  padding-top: 60px;
   background-color: var(--team-bg-color);
-}
-
-.team-list {
-  display: flex;
+  padding-bottom: 60px;
 }
 
 .team-item {
   list-style-type: none;
-  width: 270px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-next-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.team-item + .team-item {
-  margin-left: 30px;
 }
 
 .team-title {
@@ -954,6 +947,7 @@ label > a {
 
 .team-item-network {
   display: flex;
+  justify-content: center;
   margin-top: 16px;
 }
 
@@ -981,9 +975,5 @@ label > a {
   display: block;
   margin: auto;
   background-position: center;
-}
-
-.conteiner-network {
-  margin: 0 32px 0 32px;
 }
 /*# sourceMappingURL=main.css.map */

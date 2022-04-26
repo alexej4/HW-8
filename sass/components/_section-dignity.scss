@@ -1,24 +1,29 @@
 
 .dignity {
+    padding-top: 60px;
     padding-bottom: 0;
 }
 
-.dignity__list {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    /* легкий способ растянуть элементы */
-    justify-content: space-between;
-}
+
+    
+//     // display: flex;
+//     // flex-wrap: wrap;
+//     /* легкий способ растянуть элементы */
+//     justify-content: space-between;
+// }
 
 /* Отображение ширины в % от родителя  (100% - сумма маржинов в строке -1(крайний)) / на количество элементов в строке*/
-.dignity__item {
-    width: calc((100% - 90px) / 4);
-    list-style-type: none;
+// .dignity__item {
+//     width: calc((100% - 90px) / 4);
+//     list-style-type: none;
 
-    &:not(:last-child) {
-    margin-right: 30px;
-}
+//     &:not(:last-child) {
+//     margin-right: 30px;
+// }
+// }
+.dignity__item {
+    width: 100%;
+    margin-bottom: 30px;
 }
 .dignity__title {
     font-size: 14px;
@@ -30,14 +35,16 @@
 }
 
 .dignity__text {
+    font-size: 14px;
     line-height: 1.71;
+
 }
 
 .thumb-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
+    width: 100%;
     height: 120px;
     background-color: #f5f4fa;
     border-radius: 4px;

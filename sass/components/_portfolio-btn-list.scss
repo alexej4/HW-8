@@ -1,9 +1,12 @@
 .port-btn-list {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    // justify-content: center;
 &>.item:not(:last-child) {
-    margin-right: 8.12px;
+    margin-right: 8px; 
+    margin-bottom: 15px;
+    
 }
 }
 .port-btn {

@@ -1,11 +1,21 @@
-.subscription-form-lable {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+// .subscription-form-lable {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+// }
+.subscription-form {
+    // display: flex;
+    // align-content: center;
+    // width: 100%;
+    // display: inline-block;
+    // justify-content: center;
+    // margin-left: auto;
+    // margin-right: auto;
 }
 
 .subscription-form-input {
-    width: 358px;
+    
+    width: 450px;
     height: 50px;
     padding-left: 16px;
     align-items: center;
@@ -17,10 +27,11 @@
     border-radius: 4px;
     background-color: transparent;
     margin-right: 12px;
+    
 }
 
 .subscription-button {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border: none;
@@ -36,6 +47,9 @@
     background-color: var(--logo-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 &::after {
     display: inline-flex;
     justify-content: center;
@@ -49,7 +63,9 @@
 }
 }
 .subscription-form-title {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;

@@ -1,7 +1,8 @@
 .ftr .logo {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     color: var(--white-next-color);
-    margin-bottom: 20px;
+    margin:0;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;

@@ -1,24 +1,26 @@
 .hero {
     background: var(--hero-color);
-    max-width: 1600px;
-    height: 600px;
+    max-width: 480px;
+    height: 400px;
     /* Многослойный фон: сначала прозрачный фон (затемнение) (с помощью градиента,
   потом ставим картинку) */
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/Imgfon1.jpg);
+        url(../../images/img-hero.jpg);
     background-size: cover;
-    padding-top: 200px;
+    padding-top: 118px;
     padding-bottom: 200px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .hero h1 {
-    width: 696px;
+    padding-top: 0;
+    width: 360px;
     margin: 0 auto;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
