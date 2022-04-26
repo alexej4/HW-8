@@ -1,6 +1,13 @@
 .work-thumb {
     position: relative;
 }
+.about-work {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    padding-top: 0;
+}
 
 .work-thumb__title {
     position: absolute;

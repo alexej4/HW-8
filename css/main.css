@@ -366,6 +366,16 @@ a {
   position: relative;
 }
 
+.about-work {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .about-work {
+    display: none;
+  }
+}
+
 .work-thumb__title {
   position: absolute;
   bottom: 0;
