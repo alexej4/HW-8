@@ -142,6 +142,13 @@ a {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-list, .nav-contacts {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .page-header {
   position: relative;
 }
@@ -150,13 +157,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .mobile-menu-btn {
   background-color: transparent;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
   line-height: 0;
 }
 
@@ -219,6 +226,12 @@ a {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu.is-open {
