@@ -87,11 +87,11 @@
             <div class="container">
             <h1 class="visually-hidden">Наши роботы</h1>
         <ul class="port-btn-list">
-            <li class="item"><button type="button" class="port-btn">Все</button></li>
-            <li class="item"><button type="button" class="port-btn">Веб-сайты</button></li>
-            <li class="item"><button type="button" class="port-btn">Приложения</button></li>
-            <li class="item"><button type="button" class="port-btn">Дизайн</button></li>
-            <li class="item"><button type="button" class="port-btn">Маркетинг</button></li>
+            <li class="port-btn-list__item"><button type="button" class="port-btn">Все</button></li>
+            <li class="port-btn-list__item"><button type="button" class="port-btn">Веб-сайты</button></li>
+            <li class="port-btn-list__item"><button type="button" class="port-btn">Приложения</button></li>
+            <li class="port-btn-list__item"><button type="button" class="port-btn">Дизайн</button></li>
+            <li class="port-btn-list__item"><button type="button" class="port-btn">Маркетинг</button></li>
         </ul> 
         <ul class="port-list">
             <li class="port-item">
@@ -225,56 +225,59 @@
         </section>
     </main>
     <!--Подвал сайта-->
-   <footer class="ftr">
+    <footer class="ftr">
         <div class="container ftr-dad">
-            <div class="ftr-main">
-            <a href="./index.html" lang="en" class="logo"><span>Web</span>Studio</a>
-            <address>
-                <ul class="ftr-list">
-                    <li class="ftr-item"><a href="https://goo.gl/maps/syK6WyoSJA7LZPz8A" target="_blank" rel="noopener noreferrer"
-                            class="ftr-street">г. Киев, бульвар Леси Украинки, 26</a></li>
-                    <li class="ftr-item"><a class="ftr-contacts ftr-sc" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                    <li class="ftr-item"><a class="ftr-contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
-                </ul>
-            </address>
-            </div>
-            <div class="ftr-socnetwork">
-            <p><strong>Присоеденяйтесь</strong></p>
-            <ul class="ftr-socnetwork-list">
-               <li class="ftr-list-item">
-                    <a href="" class="ftr-list-item-link">
-                        <svg class="ftr-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-instagramFtr"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="ftr-list-item">
-                    <a href="" class="ftr-list-item-link">
-                        <svg class="ftr-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-twitterFtr"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="ftr-list-item">
-                    <a href="" class="ftr-list-item-link">
-                        <svg class="ftr-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-facebookFtr"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="ftr-list-item">
-                    <a href="" class="ftr-list-item-link">
-                        <svg class="ftr-icon" width="20" height="20">
-                            <use href="./images/symbol-defs.svg#icon-linkedinFtr"></use>
-                        </svg>
-                    </a>
-                </li>    
-            </ul>
+            <div class="ftr-tablet">
+                <div class="ftr-main">
+                    <a href="./index.html" lang="en" class="logo ftr-logo"><span>Web</span>Studio</a>
+                    <address>
+                        <ul class="ftr-list">
+                            <li class="ftr-item"><a href="https://goo.gl/maps/syK6WyoSJA7LZPz8A" target="_blank"
+                                    rel="noopener noreferrer" class="ftr-street">г. Киев, бульвар Леси Украинки, 26</a></li>
+                            <li class="ftr-item"><a class="ftr-contacts ftr-sc"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                            <li class="ftr-item"><a class="ftr-contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="ftr-socnetwork">
+                    <p class="ftr-socnetwork__title"><strong>Присоеденяйтесь</strong></p>
+                    <ul class="ftr-socnetwork-list">
+                        <li class="ftr-list-item">
+                            <a href="" class="ftr-list-item-link">
+                                <svg class="ftr-icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-instagramFtr"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ftr-list-item">
+                            <a href="" class="ftr-list-item-link">
+                                <svg class="ftr-icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-twitterFtr"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ftr-list-item">
+                            <a href="" class="ftr-list-item-link">
+                                <svg class="ftr-icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-facebookFtr"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ftr-list-item">
+                            <a href="" class="ftr-list-item-link">
+                                <svg class="ftr-icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-linkedinFtr"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <form class="subscription-form">
                 <p class="subscription-form-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
                 <div class="subscription-form-lable">
-                    <input type="email" class="subscription-form-input" placeholder="E-mail" name="user-subscription"
+                    <input type="email" class="subscription-form__input" placeholder="E-mail" name="user-subscription"
                         id="user-subscription" required>
                     <button type="submit" class="subscription-button">Подписаться</button>
                 </div>

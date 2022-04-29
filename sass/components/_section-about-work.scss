@@ -6,7 +6,7 @@
         display: none;
     }
 
-    padding-top: 0;
+    padding-top: 94px;
 }
 
 .work-thumb__title {
@@ -25,13 +25,20 @@
 }
 
 .about-w__list {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc(100%/3 - 30px);
+    
+    }
 }
 
-.a-w__item {
-    list-style-type: none;
-}
+
+.a-w__item:not(:last-child) {
+    margin-right: 30px;
+} 
+    
 
 .about-work__title {
     font-weight: 700;

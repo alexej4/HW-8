@@ -1,7 +1,7 @@
-.modal {
-    width: 450px;
-    overflow: scroll;
-}
+// .modal {
+//     width: 450px;
+//     overflow: scroll;
+// }
 .modal>strong {
     display: block;
     margin-bottom: 5px;
@@ -85,13 +85,19 @@
 .checkbox-label {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #757575;
     text-align: center;
     margin-bottom: 25px;
     justify-content: center;
+
+@media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+}
+
 &::before {
     content: "";
     display: inline-block;

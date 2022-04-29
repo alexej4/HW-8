@@ -1,14 +1,27 @@
 .port-btn-list {
-    list-style: none;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
-&>.item:not(:last-child) {
-    margin-right: 8px; 
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+    
+    @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
     
 }
+    @media screen and (min-width: $desktop) {
+    margin-bottom: 34px;   
 }
+}
+
+.port-btn-list__item:not(:last-child) {
+    margin-right: 8px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+}
+  
+
 .port-btn {
     height: 38px;
     background: var(--team-bg-color);

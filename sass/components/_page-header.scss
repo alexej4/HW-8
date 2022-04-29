@@ -1,13 +1,4 @@
 
-.nav-list,
-.nav-contacts {
-    display: none;
-    @media screen and (min-width: $tablet) {
-    display: flex;;
-    }
-
-}
-
 .page-header {
     position: relative;
 }
@@ -15,9 +6,12 @@
 .header__wrap {
     display: flex;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     
     @media screen and (max-width: 767px) {
     justify-content: space-between;
+
     }
 }
 
@@ -27,7 +21,6 @@
     border-bottom: 1px solid #ececec;
     display: flex;
     align-items: center;
-    z-index: 1;
 }
 }
 
@@ -36,6 +29,14 @@
     display: flex;
     align-items: center;
 }
+}
+.nav-list {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    }
+
 }
 .nav-item:not(:last-child)  {
     @media screen and (min-width: $tablet) {
@@ -115,29 +116,53 @@
 }
 
 .nav-contacts {
+    display: none;
     @media screen and (min-width: $tablet){
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
+    display: block;
     margin-left: auto;
-    padding: 0;
+}    
+    @media screen and (min-width:$desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
 }
+}
+.cont-item {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+    
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    
+    }
 }
 
-.nav-contacts a {
-    @media screen and (min-width: $tablet) {
+
+.cont-link{
     text-decoration: none;
     font-weight: 500;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--context-color);
-    align-self: baseline;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    }
+   
 &:hover,
 &:focus {
     color: var(--logo-color);
 }
-}
+
 }
 .header-icon {
     @media screen and (min-width: $tablet) {
@@ -163,23 +188,9 @@
     height: 16px;
 }
 
-.nav-contacts {
-    @media screen and (min-width: $tablet) {
-    display: block;
-    margin-left: auto;
-    }
-}
-// .cont-item {
-//     list-style-type: none;
-//     // display: flex;
-// &+.cont-item {
-//     margin-left: 50px;
-// }    
+// .nav-contacts {
+//     @media screen and (min-width: $tablet) {
+//     display: block;
+//     margin-left: auto;
+//     }
 // }
-.cont-link {
-    // display: flex;
-    // flex-wrap: wrap;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}

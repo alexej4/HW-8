@@ -1,34 +1,61 @@
-// .subscription-form-lable {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-// }
+
 .subscription-form {
-    // display: flex;
-    // align-content: center;
-    // width: 100%;
-    // display: inline-block;
-    // justify-content: center;
-    // margin-left: auto;
-    // margin-right: auto;
+    @media screen and (min-width: $desktop) {
+    margin-left: auto;
+        
 }
 
-.subscription-form-input {
+.subscription-form-title {
     
-    width: 450px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-next-color);
+    
+    @media screen and (min-width: $desktop) {
+        text-align: start;
+        margin-bottom: 0;
+    }
+}
+
+.subscription-form-lable {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+}
+
+.subscription-form__input {
+    display: block;
     height: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 16px;
-    align-items: center;
-    font-size: 16px;
-    line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    background-color: transparent;
-    margin-right: 12px;
     
-}
+    background-color: transparent;
+    
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+
+        width: 358px;
+        margin: 0;
+    
+    }
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    }
 
 .subscription-button {
     display: flex;
@@ -50,10 +77,13 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+    }
 &::after {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    // display: inline-flex;
+    // justify-content: center;
+    // align-items: center;
     content: '';
     margin-left: 10px;
     width: 24px;
@@ -62,16 +92,5 @@
     background-size: contain;
 }
 }
-.subscription-form-title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--white-next-color);
-    margin-bottom: 20px;
+
 }

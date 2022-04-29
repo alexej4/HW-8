@@ -2,8 +2,6 @@
     background: var(--hero-color);
     max-width: 480px;
     height: 400px;
-    /* Многослойный фон: сначала прозрачный фон (затемнение) (с помощью градиента,
-  потом ставим картинку) */
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../../images/img-hero.jpg);
     background-size: cover;
@@ -13,6 +11,37 @@
     margin-left: auto;
     margin-right: auto;
 
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-mobile@2x.jpg);
+}
+    
+    @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-tablet.jpg);
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-tablet@2x.jpg);
+}
+}
+    @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-desctop@2x.png);
+}
+
+}
 }
 
 .hero h1 {
@@ -26,6 +55,11 @@
     text-transform: uppercase;
     margin-bottom: 30px;
     color: var(--white-next-color);
+    
+    @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+}
 }
 
 /* Кнопка герой */
