@@ -111,8 +111,6 @@ a {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .logo:active, .logo:focus, .logo:hover {
@@ -140,6 +138,14 @@ a {
 
 .page-header {
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .page-header {
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
 }
 
 .header__wrap {
@@ -1305,9 +1311,9 @@ label > a {
 .mobile-menu-btn {
   background-color: transparent;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0;
   line-height: 0;
+  top: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1317,7 +1323,10 @@ label > a {
 }
 
 .mobile-menu__container {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
 }
@@ -1326,6 +1335,7 @@ label > a {
   position: absolute;
   top: 10px;
   right: 15px;
+  padding: 0;
   border: none;
   background-color: transparent;
   line-height: 0;
@@ -1363,7 +1373,8 @@ label > a {
 }
 
 .mobile-menu {
-  position: absolute;
+  display: flex;
+  position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -1412,7 +1423,7 @@ label > a {
 }
 
 .mobile-menu__nav-contacts {
-  margin-top: 302px;
+  margin-top: auto;
 }
 
 .mobile-menu__tel {

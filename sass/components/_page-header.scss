@@ -1,6 +1,12 @@
 
 .page-header {
     position: relative;
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    
+    }
 }
 
 .header__wrap {
