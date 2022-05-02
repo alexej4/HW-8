@@ -43,6 +43,7 @@
 
 .mobile-menu__soc-network {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 62px;
 }
 
@@ -55,6 +56,10 @@
     line-height: 22px;
     letter-spacing: 0.02em;
     color: var(--logo-color);
+}
+
+.mobile-menu__soc-network__item {
+    margin-bottom: 10px;
 }
 
 .mobile-menu__soc-network__item:not(:last-child) {

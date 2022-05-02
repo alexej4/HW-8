@@ -349,8 +349,9 @@ a {
   padding-top: 118px;
   padding-bottom: 200px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin: auto;
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -390,7 +391,6 @@ a {
 
 .hero h1 {
   padding-top: 0;
-  width: 360px;
   margin: 0 auto;
   font-weight: 900;
   font-size: 26px;
@@ -399,6 +399,12 @@ a {
   text-transform: uppercase;
   margin-bottom: 30px;
   color: var(--white-next-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero h1 {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1353,6 +1359,7 @@ label > a {
 
 .mobile-menu__soc-network {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 62px;
 }
 
@@ -1364,6 +1371,10 @@ label > a {
   line-height: 22px;
   letter-spacing: 0.02em;
   color: var(--logo-color);
+}
+
+.mobile-menu__soc-network__item {
+  margin-bottom: 10px;
 }
 
 .mobile-menu__soc-network__item:not(:last-child) {
